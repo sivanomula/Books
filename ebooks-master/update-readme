@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -eu
+
+echo "# Books"
+echo "Some books organised by topic."
+echo
+
+image='[<img height="14" src="https://confluence.schibsted.io/s/en_GB/7103/9740d52e06037c926d0bef8c46735f0805791491/1.0.50/_/download/resources/com.atlassian.confluence.plugins.confluence-dashboard:confluence-dashboard-resources/assets/images/2.0/icon-page-small.svg">]'
+last=""
+find . -type f -name "*.pdf"|sort|while read path
+do
+  dir=$(dirname "${path}")
+  if [[ $dir != $last ]]
+  then
+    name=${dir:2}
+    first=$(echo ${name:0:1}|tr a-z A-Z)
+    rest=$(echo ${name:1})
+    echo
+    echo "### ${first}${rest//\// / }"
+    echo
+    last=$dir
+  fi
+  name=${path}
+  title="${name//$dir\//}"
+  len="${#title}"
+  max="$(( $len - 4))"
+  link="${path:2}"
+  link="${link// /%20}"
+  raw="https://github.com/jpedro/books/raw/master/$link"
+
+  echo "- $image($raw)&nbsp; [${title:0:$max}]($link)"
+done
