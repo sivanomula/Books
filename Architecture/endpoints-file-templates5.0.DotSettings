@@ -1,0 +1,144 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Description/@EntryValue">Get</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Text/@EntryValue">using System.Threading;&#xD;
+using System.Threading.Tasks;&#xD;
+using Ardalis.ApiEndpoints;&#xD;
+using Microsoft.AspNetCore.Http;&#xD;
+using Microsoft.AspNetCore.Mvc;&#xD;
+using Swashbuckle.AspNetCore.Annotations;&#xD;
+&#xD;
+namespace $NAMESPACE$&#xD;
+{&#xD;
+	[ApiVersion("1.0")]&#xD;
+    [Route(RouteTemplate.Get)]&#xD;
+    public class Get : BaseAsyncEndpoint.WithRequest&lt;GetRequest&gt;.WithResponse&lt;GetResponse&gt;&#xD;
+    {        &#xD;
+        [SwaggerOperation(&#xD;
+			Summary = GetSwaggerMetadata.Summary,&#xD;
+			Description = GetSwaggerMetadata.Description,&#xD;
+            OperationId = nameof(Get),&#xD;
+            Tags = new[] { SharedSwaggerMetadata.Tag }&#xD;
+        )]&#xD;
+        [ProducesResponseType(typeof(GetResponse), StatusCodes.Status200OK)]&#xD;
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]&#xD;
+        [ProducesResponseType(StatusCodes.Status404NotFound)]&#xD;
+        [HttpGet]&#xD;
+        public override async Task&lt;ActionResult&lt;GetResponse&gt;&gt; HandleAsync(&#xD;
+            [FromQuery] GetRequest request,&#xD;
+            CancellationToken cancellationToken = default)&#xD;
+        {&#xD;
+            return await Task.FromResult(StatusCode(StatusCodes.Status501NotImplemented));&#xD;
+        }&#xD;
+	}&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Categories/=Imported_002012_002D04_002D2021/@EntryIndexedValue">Imported 12-04-2021</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/CustomProperties/=FileName/@EntryIndexedValue">Get</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Field/=NAMESPACE/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=F5B929EDD0BEF44696249C2DB25FF5C0/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=F5B929EDD0BEF44696249C2DB25FF5C0/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=F5B929EDD0BEF44696249C2DB25FF5C0/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig File="$NAME$.Dto.cs" /&gt;</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=F5B929EDD0BEF44696249C2DB25FF5C0/Order/@EntryValue">0</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=F5B929EDD0BEF44696249C2DB25FF5C0/SectionPlain/Text/@EntryValue">using System.Runtime.Serialization;&#xD;
+using Swashbuckle.AspNetCore.Annotations;&#xD;
+&#xD;
+namespace $NAMESPACE$&#xD;
+{&#xD;
+    [DataContract(Name="Add your DTO name here e.g. Fund Name Match")]&#xD;
+    public class GetDto&#xD;
+    {&#xD;
+        [SwaggerSchema(SwaggerSchemaDescription.YourDtoProperty)]&#xD;
+        public int YourDtoProperty { get; set; }        &#xD;
+    }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=DFE7721BE62D564093610765CB60D48D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=DFE7721BE62D564093610765CB60D48D/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=DFE7721BE62D564093610765CB60D48D/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig File="$NAME$.Request.cs" /&gt;</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=DFE7721BE62D564093610765CB60D48D/Order/@EntryValue">1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=DFE7721BE62D564093610765CB60D48D/SectionPlain/Text/@EntryValue">using System.Runtime.Serialization;&#xD;
+using Swashbuckle.AspNetCore.Annotations;&#xD;
+&#xD;
+namespace $NAMESPACE$&#xD;
+{&#xD;
+    [DataContract(Name = "[[Your Endpoint Name]] GET Request")]&#xD;
+    public class GetRequest&#xD;
+    {&#xD;
+        [SwaggerParameter(Description = SwaggerSchemaDescription.YourRequestProperty, Required = true)]&#xD;
+        public string YourRequestProperty { get; set; } = null!;&#xD;
+        &#xD;
+    }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=C9AF9B03F8829440BF205B2A24A29CE3/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=C9AF9B03F8829440BF205B2A24A29CE3/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=C9AF9B03F8829440BF205B2A24A29CE3/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig File="$NAME$.Response.cs" /&gt;</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=C9AF9B03F8829440BF205B2A24A29CE3/Order/@EntryValue">2</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=C9AF9B03F8829440BF205B2A24A29CE3/SectionPlain/Text/@EntryValue">using System.Runtime.Serialization;&#xD;
+using Swashbuckle.AspNetCore.Annotations;&#xD;
+&#xD;
+namespace $NAMESPACE$&#xD;
+{&#xD;
+    [DataContract(Name = "[[Your Endpoint Name]] GET Response")]&#xD;
+    public class GetResponse&#xD;
+    {        &#xD;
+        [SwaggerParameter(Description = SwaggerSchemaDescription.YourResponseProperty)]&#xD;
+        public GetDto YourResponseProperty {get; set; } = null!;&#xD;
+    }&#xD;
+}&#xD;
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=2F76BCEB3390214CAA1BD0F3C4CF4D24/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=2F76BCEB3390214CAA1BD0F3C4CF4D24/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=2F76BCEB3390214CAA1BD0F3C4CF4D24/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig File="$NAME$.SwaggerMetadata.cs" /&gt;</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=2F76BCEB3390214CAA1BD0F3C4CF4D24/Order/@EntryValue">3</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=2F76BCEB3390214CAA1BD0F3C4CF4D24/SectionPlain/Text/@EntryValue">namespace $NAMESPACE$&#xD;
+{&#xD;
+    internal static class GetSwaggerMetadata&#xD;
+    {&#xD;
+        public const string Summary = "A good summary of the endpoint operation.";&#xD;
+        public const string Description = "A good description of the endpoint operation.";&#xD;
+    }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=DC298FDE5501DD4F96786137CE00CB04/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=DC298FDE5501DD4F96786137CE00CB04/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=DC298FDE5501DD4F96786137CE00CB04/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig File="RouteTemplate.cs" /&gt;</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=DC298FDE5501DD4F96786137CE00CB04/Order/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=DC298FDE5501DD4F96786137CE00CB04/SectionPlain/Text/@EntryValue">namespace $NAMESPACE$&#xD;
+{&#xD;
+    internal static class RouteTemplate&#xD;
+    {&#xD;
+        public const string Get = "/[[YOUR ROUTE]]";&#xD;
+    }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=AFC3D5870D1C684894E8C05E82183CCC/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=AFC3D5870D1C684894E8C05E82183CCC/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=AFC3D5870D1C684894E8C05E82183CCC/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig File="SharedSwaggerMetadata.cs" /&gt;</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=AFC3D5870D1C684894E8C05E82183CCC/Order/@EntryValue">5</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=AFC3D5870D1C684894E8C05E82183CCC/SectionPlain/Text/@EntryValue">namespace $NAMESPACE$&#xD;
+{&#xD;
+    internal static class SharedSwaggerMetadata&#xD;
+    {&#xD;
+        public const string Tag = "[[YOUR SWAGGER TAG]]";&#xD;
+    }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=F0E01966A49F7B4BB8B2EC071C3ABFE2/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=F0E01966A49F7B4BB8B2EC071C3ABFE2/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=F0E01966A49F7B4BB8B2EC071C3ABFE2/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig File="SwaggerSchemaDescription.cs" /&gt;</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=F0E01966A49F7B4BB8B2EC071C3ABFE2/Order/@EntryValue">6</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A14C52294AB335488BE10CD7A41259F5/Section/=F0E01966A49F7B4BB8B2EC071C3ABFE2/SectionPlain/Text/@EntryValue">namespace $NAMESPACE$&#xD;
+{&#xD;
+    internal static class SwaggerSchemaDescription&#xD;
+    {&#xD;
+        public const string YourRequestProperty = "A good description of your REQUEST property.";&#xD;
+        public const string YourResponseProperty = "A good description of your RESPONSE property.";&#xD;
+		public const string YourDtoProperty = "A good description of your DTO property";&#xD;
+    }&#xD;
+}</s:String></wpf:ResourceDictionary>
